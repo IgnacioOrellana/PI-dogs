@@ -1,0 +1,145 @@
+.detail-container {
+  background: url('../../Imagens/patitas.jpeg') no-repeat;
+  min-width: 100vh;
+  min-height: 100vh;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(177, 95, 19, 0.425);
+  padding: 5px;
+  margin: 0% 10% 0% 10%;
+  width: 80%;
+  height: 550px;
+  border-radius: 20px;
+  border: 3px solid rgb(129, 2, 2);
+  box-shadow: 8px 8px 5px 3px rgba(0, 0, 0, 0.301);
+}
+
+.box-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#breed-title {
+  font-family: fantasy;
+  font-size: 28px;
+  color: rgb(129, 2, 2);
+  margin: 10px 0px 10px 0px;
+}
+
+.sides-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 80%;
+  margin: 10px;
+}
+
+#breed-image {
+  border: 2px outset rgb(129, 2, 2);
+  box-shadow: 8px 8px 5px 3px rgba(0, 0, 0, 0.301);
+  border-radius: 15%;
+}
+
+/* .left-side {
+  display: flex;
+  border: 2px solid rgb(196, 168, 14);
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+} */
+
+.rigth-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  border: 2px solid rgb(129, 2, 2);
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+  margin: 25px;
+}
+
+.details-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1px;  
+  box-sizing: border-box;
+}
+
+#details {
+  margin: 0px;
+  font-size: 20px;
+  border-bottom: 2px solid rgb(129, 2, 2); 
+}
+
+.subtitulos-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin:0px;
+  border-bottom: 3px solid rgb(129, 2, 2);
+}
+
+.subtitulos {
+  margin: 0px 10px;
+  font-size: 18px;
+}
+
+p {
+  font-family: cursive;
+  font-size: 17px;
+}
+
+#parraf-tempers {
+  margin: 10px;
+  font-family: cursive;
+  font-size: 17px;
+}
+
+.volver-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+}
+
+#volver-btn {
+  position: absolute;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  color: white;
+  background-color: rgb(129, 2, 2);
+  bottom: 2%;
+  left: 47%;
+  height: 35px;
+  width: 7%;
+  border-radius: 15px;  
+  cursor: pointer;
+}
+
+#volver-btn:hover {
+  color: rgb(129, 2, 2); 
+  background-color: white;
+}
+

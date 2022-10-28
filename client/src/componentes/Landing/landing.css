@@ -1,0 +1,25 @@
+.landing {
+  min-width: 100vh;
+  min-height: 100vh;
+  background: url('../../Imagens/dogs.jpg') no-repeat;
+  background-size: cover;
+}
+
+.btn {
+  position: absolute;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  top: 65%;
+  left: 45%;
+  background-color: rgb(41, 168, 151);
+  height: 40px;
+  width: 10%;
+  border-radius: 10px;  
+  cursor: pointer;
+}
+
+.btn:hover {
+  height: 42px;
+  background-color: rebeccapurple;
+}
+
