@@ -11,7 +11,9 @@ export default function Breed({ name, image, weight, temperament, id, origen }) 
         </Link>
 
         <div className='card-image'>
-          <img id='breed-imagen' src={image} width="135" height="90" alt="" />
+          <Link to={`/home/${id}`}>
+            <img id='breed-imagen' src={image} width="135" height="90" alt="" />
+          </Link>
         </div>
 
         <div className='card-peso'>
@@ -23,11 +25,7 @@ export default function Breed({ name, image, weight, temperament, id, origen }) 
           <h4 id='breed-temperamentos'>Temperamentos</h4>
           <p id='breed-temperamentos-info'>{temperament} </p>
         </div>
-
       </div>  
-      {/* <div>
-        <h4>Origen: {origen}</h4>
-      </div> */}
     </div>
 
     //este estaba antes

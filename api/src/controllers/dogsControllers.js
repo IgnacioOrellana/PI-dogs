@@ -46,7 +46,8 @@ async function getDogs (req, res, next) {
             const [api, db] = value
             const dogsBreed = api.data.filter((p) => {
               if(typeof p.name === "string") {
-                return p.name.toUpperCase() === name.toUpperCase()
+                // return p.name.toUpperCase() === name.toUpperCase()
+                return p.name.toUpperCase().includes(name.toUpperCase())
               }
             })
             let dogsApi;

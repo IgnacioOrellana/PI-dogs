@@ -29,9 +29,10 @@ const rootReducer = (state = initialState, action) => {
         detail: []
       }
     case GET_BREED_BY_NAME:
+      // console.log("reducer ===>",action.payload)
       return {
         ...state,
-        breed: typeof action.payload === "object" ? action.payload : []
+        breed: action.payload === undefined ? [] : action.payload
       }
     case GET_BREED_BY_ID:
       return {
