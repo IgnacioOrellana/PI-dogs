@@ -14,12 +14,20 @@ export default function Home() {
   const cardsPerPage = 8
   const lastBreed = currentPage * cardsPerPage
   const firstBreed = lastBreed - cardsPerPage
-  const amountOfBreeds = breeds.length > 0 ? breeds.slice(firstBreed, lastBreed) : null
+  const amountOfBreeds = breeds.length > 0 ? breeds.slice(firstBreed, lastBreed) : []
+  const [loading, setLoading] = useState(true)
   
+  console.log("loading ===>", loading)
+  console.log("home ===>", amountOfBreeds)
+
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber)
+    if(amountOfBreeds.length > 0) {
+      console.log("setLoading a false")
+      setLoading(false)
+    }
   };
-
+  
   useEffect(() => {
     dispatch(getBreeds())
   }, [dispatch])
@@ -36,24 +44,27 @@ export default function Home() {
       </div>
 
       <div className="container">
-        {amountOfBreeds ? (amountOfBreeds.map((dog) => {
-          return (
-            <div key={dog.id} >
-              <Breed 
-                id={dog.id}
-                name={dog.raza}
-                image={dog.imagen}
-                weight={dog.peso}
-                temperament={ 
-                  dog.hasOwnProperty("temperamento") ? dog.temperamento 
-                  : dog.hasOwnProperty("temperamentos") ? dog.temperamentos.map(t => `${t.name}, `)
-                  : "Desconocido"
-                }
-                origen={dog.origen}
-              />
-            </div>
-          )
-        })) : <Loader />} 
+        { amountOfBreeds.length > 0 ? (
+            amountOfBreeds.map((dog) => {
+              return (
+                <div key={dog.id} >
+                  <Breed 
+                    id={dog.id}
+                    name={dog.raza}
+                    image={dog.imagen}
+                    weight={dog.peso}
+                    temperament={ 
+                      dog.hasOwnProperty("temperamento") ? dog.temperamento 
+                      : dog.hasOwnProperty("temperamentos") ? dog.temperamentos.map(t => `${t.name}, `)
+                      : "Desconocido"
+                    }
+                    origen={dog.origen}
+                  />
+                </div>
+              )
+            })
+          ) : loading ? <Loader /> : <h3>No se encontro la raza buscada, cree una nueva o intente buscar otra</h3>
+        }
       </div>  
   </div>
   )
