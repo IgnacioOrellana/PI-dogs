@@ -1,0 +1,30 @@
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  width: auto;
+}
+
+.numbers a{
+  font-size: 16px;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 8px;
+  margin: 8px;
+  border: 2px solid rgb(65, 36, 3);
+  border-radius: 10px;
+  color: white;
+  background-color: rgb(177, 95, 19);
+  cursor: pointer;
+}
+
+.numbers a:hover {
+  font-family:'Times New Roman', Times, serif;
+  color: rgb(177, 95, 19);
+  background-color: rgb(255, 255, 255);
+}
+
+.numbers a:active {
+  color: white;
+  background-color:  rgb(177, 95, 19);
+}
+

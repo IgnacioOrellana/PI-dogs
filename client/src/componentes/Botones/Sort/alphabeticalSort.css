@@ -1,0 +1,10 @@
+.alphabetical-sort {
+  background-color: white;
+  height: 100%;
+  width: 13%;
+  color:rgb(129, 2, 2);
+  background-color: white;
+  margin-right: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
