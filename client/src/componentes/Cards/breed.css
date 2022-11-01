@@ -5,7 +5,7 @@
   grid-column-gap: 5px;
   grid-row-gap: 5px;
   justify-content: center;
-  background: url('../../Imagens/patitas.jpeg') no-repeat;
+  /* background: url('../../Imagens/patitas.jpeg') no-repeat; */
   background-size: cover;
   width: auto;
   height: auto;
@@ -17,7 +17,9 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: rgba(177, 95, 19, 0.425);
+  /* background: url('../../Imagens/background.jpeg') no-repeat; */
+  /* background-color: rgba(177, 95, 19, 0.425); */
+  background-color: rgba(52, 73, 94, 0.725);
   padding: 5px;
   margin-right: 5px;
   margin-left: 5px;
@@ -26,6 +28,10 @@
   border-radius: 20px;
   border: 3px solid rgb(129, 2, 2);
   box-shadow: 8px 8px 5px 3px rgba(0, 0, 0, 0.301);
+}
+
+.breedCard:hover {
+  border: 3px solid rgb(46, 204, 113);
 }
 
 /*nueva carta*/
