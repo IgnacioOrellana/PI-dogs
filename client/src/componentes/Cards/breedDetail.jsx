@@ -19,19 +19,22 @@ export default function BreedDetail() {
       {breedDetail.length > 0 ? 
         <div className="detail-container">
           <div className="detail">
-            <div className="box-title">
+            {/* <div className="box-title">
               <h4 id="breed-title">{breedDetail[0].raza} </h4>
-            </div>
+            </div> */}
 
             <div className="sides-box">
               <div className="left-side">
-                <img id="breed-image" src={breedDetail[0].imagen} width="430" height="430" alt="" />
+                <img id="breed-image" src={breedDetail[0].imagen} width="450" height="450" alt="" />
               </div>
 
               <div className="rigth-side">
-                <div className="details-box">
+              <div className="details-box">
+                <h4 id="breed-title">{breedDetail[0].raza} </h4>
+              </div>
+                {/* <div className="details-box">
                   <h4 id="details">DETALLE</h4>
-                </div>
+                </div> */}
                 <div className="subtitulos-box">
                   <h4 className="subtitulos">Altura:</h4>
                   <p> {breedDetail[0].altura} cm </p> 

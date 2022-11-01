@@ -6,25 +6,30 @@
 }
 
 .numbers a{
-  font-size: 16px;
+  font-size: 14px;
   font-family: 'Times New Roman', Times, serif;
   padding: 8px;
   margin: 8px;
-  border: 2px solid rgb(65, 36, 3);
+  border: 2px solid rgb(129, 2, 2);
   border-radius: 10px;
-  color: white;
-  background-color: rgb(177, 95, 19);
+  font-family: cursive;
+  /* color: white; */
+  color: rgb(129, 2, 2);
+  /* background-color: rgb(177, 95, 19); */
+  background-color: rgba(52, 73, 94, 0.725);
   cursor: pointer;
 }
 
 .numbers a:hover {
-  font-family:'Times New Roman', Times, serif;
+  /* font-family:'Times New Roman', Times, serif; */
   color: rgb(177, 95, 19);
+  /* color: rgb(129, 2, 2); */
   background-color: rgb(255, 255, 255);
 }
 
 .numbers a:active {
   color: white;
-  background-color:  rgb(177, 95, 19);
+  /* background-color:  rgb(177, 95, 19); */
+  background-color:  rgb(46, 204, 113);
 }
 
