@@ -1,48 +1,394 @@
-/* body {
-  background-color: red;
-} */
-
 .landing {
-  /* min-width: 100vh;
-  min-height: 100vh; */
-  /* background-size: cover; */
+  min-width: 100vh;
+  min-height: 100vh;
+  background-size: cover;
   display: flex;
   flex-direction: row;
-  /* justify-content: center; */
-  /* background: ;/ */
-  /* background-color: blue; */
+  justify-content: center;
+  align-items: center;
 }
 
-.left-box {
+.main-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+  min-width: 80%;
+  min-height: 80vh;
+  box-shadow: 8px 8px 8px 8px rgb(0 0 0 / 50%);
+}
+
+.left-color {
+  position: fixed;
+  left: 0px;
+  background-color: rgba(52, 73, 94, 0.725);
+  min-width: 80%;
+  min-height: 100vh;
+}
+
+.rigth-color {
+  position: fixed;
+  right: 0px;
   background-color: rgb(129, 2, 2);
-  width: 100vh;
-  height: 100vh;
-  /* min-width: 100vh; */
-  /* min-height: 100vh; */
+  min-width: 30%;
+  min-height: 100vh;
 }
 
-.rigth-box {
-  background-color:rgba(52, 73, 94, 0.725);
-  width: 100vh;
-  height: 100vh;
+.main-left-box {
+  position: absolute;
+  left: 0px;
+  min-width: 75%;
+  min-height: 80vh;
+}
+
+.main-rigth-box {
+  position: absolute;
+  right: 0px;
+  background-color: rgb(129, 2, 2);
+  min-width: 25%;
+  min-height: 80vh;
+  border-radius: 20% 0% 0% 20%;
+  margin: 0% 4% 0% 0%;
+}
+
+.main-info {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  right: 5%;
+  min-width: 80%;
+  min-height: 60vh;
+}
+
+.landing-title {
+  width: 85%;
+  min-height: 5vh;
+  margin: 20px 0px 0px 50px;
+  font-family: cursive;
+  font-size: 40px;
+  font-weight: 900;
+  font-style: italic;
+  color: khaki;
+}
+
+#bienvenido {
+  margin: 0px;
+}
+
+.landing-subtitle {
+  width: 80%;
+  margin: 10px 0px 0px 60px;
+  min-height: 10vh;
+  font-size: 20px;
+  color: snow;
+}
+
+.parrafo2 {
+  width: 80%;
+  margin: 15px 0px 40px 60px;
+  font-size: 20px;
+  color: khaki;
+}
+
+.landing-image {
+  position: absolute;
+  min-width: 100%;
+  min-height: 70vh;
+  right: -15%;
+}
+
+#landing-logo {
+  position: absolute;
+  width: 100%;
+  min-height: 80vh;
 }
 
 .btn {
-  position: absolute;
   font-family: 'Times New Roman', Times, serif;
   font-size: 20px;
-  top: 65%;
-  left: 45%;
-  background-color: rgb(41, 168, 151);
+  background-color: rgb(129, 2, 2);
   border: 1px orange solid;
   height: 40px;
-  width: 10%;
+  min-width: 7%;
   border-radius: 10px;  
   cursor: pointer;
+  color: khaki;
 }
 
 .btn:hover {
-  height: 42px;
-  background-color: rebeccapurple;
+  background-color: rgba(52, 73, 94, 0.725)
 }
 
+.button-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 3%
+}
+
+.contact-icons {
+  width: 30%;
+  margin: 15% 0% 0% -5%
+}
+
+#linkedInLogo {
+  margin: 0% 3% 0% 0%;
+  width: 15%;
+  height: 50%;
+}
+
+#gitHubLogo {
+  margin: 0% 3% 0% 2%;
+  width: 15%;
+  height: 50%;
+}
+
+#linkedInLogo, #gitHubLogo:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 1280px) {
+  .main-info {
+    top: 10%;
+  }
+  .button-box {
+    margin-top: -5%;
+  }
+  .btn {
+    margin: 0px;
+  }
+  .contact-icons {
+    width: 230px;
+    margin: 10% 0% 0% -3%;
+  }
+}
+
+@media (max-width: 900px) {
+  .landing-title {
+    font-size: 30px;
+    margin: 20px 0px 0px 40px;
+  }
+  .landing-subtitle {
+    margin: 10px 0px 0px 60px;
+    font-size: 18px;
+  }
+  .parrafo2 {
+    margin: 5px 0px 30px 60px;
+    min-height: 5vh;
+  }
+  .button-box {
+    margin: 0px
+  }
+  .btn {
+    margin-top: 0px;
+  }
+  .contact-icons {
+    width: 225px;
+  }
+  #gmailLogo, #linkedInLogo, #gitHubLogo {
+    margin: 15% 2% 0% 1%;
+  }
+}
+
+@media (max-width: 730px) {
+  .main-info {
+    width: 50%;
+  }
+  .landing-title {
+    font-size: 20px;
+    margin: 20px 0px 0px 20px;
+  }
+  .landing-subtitle {
+    margin: 10px 0px 0px 25px;
+    font-size: 16px;
+  }
+  .parrafo2 {
+    margin: 5px 0px 30px 20px;
+    min-height: 5vh;
+  }
+  #gmailLogo, #linkedInLogo, #gitHubLogo {
+    margin: 35% 2% 0% 1%;
+  }
+  #landing-logo {
+    width: 80%;
+    margin: 0px 10px;
+  }
+}
+
+@media (max-width: 675px) { 
+  .main-content {
+    width: 30%;
+    height: 20vh;
+  }
+}
+
+@media (max-width: 680px) {
+  .main-content {
+    right: 10%;
+    width: 50%;
+    height: 50vh;
+  }
+  .landing-title {
+    font-size: 20px;
+    margin: 0px 0px 10px 20px;
+  }
+  .landing-subtitle {
+    margin: 5px 0px 15px 25px;
+    font-size: 16px;
+  }
+  .parrafo2 {
+    margin: 5px 0px 10px 20px;
+    min-height: 5vh;
+  }
+  .contact-icons {
+    margin-bottom: 100%;
+  }
+  #gmailLogo, #linkedInLogo, #gitHubLogo {
+    margin: 20% 2% 0% 1%;
+  }
+  .landing {
+    min-width: 50vh;
+  }
+  .btn {
+    height: 30px;
+    margin: 10px 0px 30px 0px;
+  }
+  .landing-image {
+    right: 0%;
+  }  
+  #landing-logo {
+    width: 110%;
+    margin: 0px 10px;
+  }
+}
+
+@media (max-width: 520px) {
+  .landing-title {
+    font-size: 20px;
+    margin: 0px 0px 10px 20px;
+  }
+  .landing-subtitle {
+    margin: 5px 0px 15px 25px;
+    font-size: 16px;
+  }
+  .parrafo2 {
+    margin: 5px 0px 10px 20px;
+    min-height: 5vh;
+  }
+  .contact-icons {
+    margin-top: 20%;
+  }
+  #gmailLogo, #linkedInLogo, #gitHubLogo {
+    margin: 0% 2% 0% 1%;
+  }
+  .landing {
+    min-width: 50vh;
+  }
+  .btn {
+    height: 30px;
+    margin: 10px 0px 30px 0px;
+  }
+  .main-content {
+    right: 10%;
+    width: 50%;
+    height: 50vh;
+  }
+  .landing-image {
+    right: 0%;
+  }  
+  #landing-logo {
+    width: 110%;
+    margin: 0px 10px;
+  }
+}
+
+@media (max-height: 680px) {
+  .contact-icons {
+    margin: 10% 0% 0% -3%
+  }
+}
+
+@media (max-height: 620px) {
+  .contact-icons {
+    margin: 5% 0% 0% -3%
+  }
+}
+
+@media (max-height: 620px) {
+  .contact-icons {
+    margin: 0% 0% 0% -3%
+  }
+}
+
+@media (max-height: 520px) {
+  .landing-title {
+    font-size: 20px;
+  }
+  .landing-subtitle {
+    font-size: 15px;
+  }
+  .parrafo2 {
+    font-size: 16px;
+  }
+  .contact-icons {
+    margin: 5% 0% 0% -3%
+  }
+}
+
+@media (max-height: 450px) {
+  .landing-title {
+    font-size: 18px;
+  }
+  .landing-subtitle {
+    font-size: 14px;
+  }
+  .parrafo2 {
+    font-size: 14px;
+    min-height: 1vh;
+  }
+  .contact-icons {
+    width: 25%;
+  }
+  #gmailLogo, #linkedInLogo, #gitHubLogo {
+    margin: -7% 2% 0% 1%;
+  }
+  .btn {
+    font-size: 14px;
+    height: 30px;
+  }
+  #landing-logo {
+    width: 40%;
+    margin: 0px 70px;
+  }
+}
+
+@media (max-height: 400px) {
+  .main-info {
+    top: 15px;
+  }
+  .landing-title {
+    margin-top: 5px;
+  }
+  .contact-icons {
+    width: 25%;
+    margin: 5% 0% 0% -3%
+  }
+  .btn {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  .button-box {
+    margin: 0px;
+  }
+}
+
+@media (max-height: 350px) {
+  .button-box {
+    margin: 10px 0px -30px 0px;
+  }
+  .btn {
+    font-size: 16px;
+    height: 22px;
+  }
+}

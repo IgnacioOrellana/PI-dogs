@@ -1,7 +1,6 @@
 /* .container-box {
   min-width: 100vh;
   min-height: 100vh;
-  background: url('../../Imagens/patitas.jpeg') no-repeat;
   background-size: cover;
 }
 
@@ -180,7 +179,7 @@
 .container-box {
   min-width: 100vh;
   min-height: 100vh;
-  background: url('../../Imagens/patitas.jpeg') no-repeat;
+  /* background: url('../../Imagens/patitas.jpeg') no-repeat;/ */
   background-size: cover;
   /* border: 3px rebeccapurple solid; */
   display: flex;

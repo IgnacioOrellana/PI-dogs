@@ -1,5 +1,5 @@
 .detail-container {
-  background: url('../../Imagens/patitas.jpeg') no-repeat;
+  background: url(../../Imagens/patitas.jpg) no-repeat;
   min-width: 100vh;
   min-height: 100vh;
   background-size: cover;
@@ -11,8 +11,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* background-color: rgba(177, 95, 19, 0.425); */
-  background-color: rgba(52, 73, 94, 0.725);
+  background-color: rgba(52, 73, 94, 0.91);
   padding: 5px;
   margin: 0% 10% 0% 10%;
   width: 80%;
@@ -55,7 +54,6 @@
 
 .left-side {
   display: flex;
-  /* border: 2px solid rgb(196, 168, 14); */
   width: 100%;
   height: 100%;
   border-radius: 20px;
@@ -108,11 +106,13 @@
 .subtitulos {
   margin: 0px 10px;
   font-size: 18px;
+  color: burlywood;
 }
 
 p {
   font-family: cursive;
   font-size: 17px;
+  color: aliceblue
 }
 
 #parraf-tempers {
