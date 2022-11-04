@@ -5,7 +5,6 @@
   grid-column-gap: 5px;
   grid-row-gap: 5px;
   justify-content: center;
-  /* background: url('../../Imagens/patitas.jpeg') no-repeat; */
   background-size: cover;
   width: auto;
   height: auto;
@@ -17,8 +16,6 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  /* background: url('../../Imagens/background.jpeg') no-repeat; */
-  /* background-color: rgba(177, 95, 19, 0.425); */
   background-color: rgba(52, 73, 94, 0.725);
   padding: 5px;
   margin-right: 5px;
