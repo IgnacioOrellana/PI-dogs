@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { sortByAlphabetical } from "../../../redux/actions.js";
-import './alphabeticalSort.css'
+import '../../Navbar/navbar.css'
 
 export default function Alphabetical({paginate}) {
   const [order, setOrder] = useState("")
@@ -20,7 +20,7 @@ export default function Alphabetical({paginate}) {
   }
 
   return (
-    <select className="alphabetical-sort" title="alphabetical" onClick={handleOnClick}>
+    <select className="sort" title="alphabetical" onClick={handleOnClick}>
       <option disabled selected>Alfabeticamente</option>
       <option value="ASC">Ascendente</option>
       <option value="DESC">Descendente</option>

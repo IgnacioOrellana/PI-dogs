@@ -8,8 +8,7 @@
   background-size: cover;
   width: auto;
   height: auto;
-  padding: 8px;
-  margin: 1px;
+  padding: 6px;
 }
 
 .breedCard {
@@ -28,7 +27,7 @@
 }
 
 .breedCard:hover {
-  border: 3px solid rgb(46, 204, 113);
+  border: 3px solid #196F3D;
 }
 
 /*nueva carta*/

@@ -1,4 +1,3 @@
-import React from "react";
 import './pagination.css'
 
 export default function Paginado({ cardsPerPage, breeds, paginate }) {
@@ -8,13 +7,11 @@ export default function Paginado({ cardsPerPage, breeds, paginate }) {
   }
 
   return (
-    <div>
+    <div className='paginate'>
       <nav>
         <ul className="pagination-container">
           {pageNumbers?.map(number => (
-            <li className="numbers" key={number}> 
-              <a id="number" onClick={() => paginate(number)}> {number} </a>
-            </li>
+            <button key={number} className="number" onClick={() => paginate(number)}> {number} </button>
           ))} 
         </ul>
       </nav>
