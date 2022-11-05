@@ -10,7 +10,7 @@ export const SORT_BY_ALPHABETICAL = "SORT";
 export const SORT_BY_WEIGHT = "SORT_BY_WEIGHT";
 export const GET_DETAIL = "GET_DETAIL"
 export const POST_BREED = "POST_BREED";
-export const RESET = "RESET"
+export const RESET = "RESET";
 
 export function getBreeds() {
   return async function (dispatch) {
@@ -94,4 +94,4 @@ export function resetBreed(reset) {
   return function (dispatch) {
     dispatch({ type: RESET, payload: reset})
   }
-}
+};

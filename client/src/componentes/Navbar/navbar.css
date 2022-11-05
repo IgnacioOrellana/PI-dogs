@@ -1,8 +1,7 @@
 .navbar-container {
   width: 100%;
   height: 60px;
-  /* background-color: rgb(177, 95, 19); */
-  background-color: rgba(52, 73, 94, 0.725);;
+  background-color: rgba(52, 73, 94, 0.725);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,24 +12,28 @@
 
 .create-box {
   width: 15%;
-  margin-right: 250px;
+  margin-right: 200px;
   border: 1px solid green;
 }
 
 .create-breed {
-  height: 25px;
+  font-family: cursive;
+  font-size: 16px;
+  min-height: 25px;
+  min-width: 150px;
   width: 90%;
-  color: rgb(129, 2, 2);
-  background-color: white;
-  margin-left: 70px;
+  color: ghostwhite;
+  background-color: rgb(129, 2, 2);
+  margin-left: 80px;
+  border: 2px solid rgb(129, 2, 2);
   border-radius: 10px;
   cursor: pointer;
 }
 
 .create-breed:hover {
-  height: 30px;
-  color: white;
-  background-color: rgb(129, 2, 2);
+  color: rgba(52, 73, 94, 0.725);
+  background-color: ghostwhite;
+  border: 2px solid rgba(52, 73, 94, 0.725);
 }
 
 .search-bar {
@@ -54,4 +57,24 @@
   width: 100%;
   border: 1px rgb(247, 242, 0) solid;
   margin-right: 70px;
+}
+
+.filters, .sort {
+  font-family: cursive;
+  font-size: 16px;
+  text-align: center;
+  height: 30px;
+  min-width: 10%;
+  margin-right: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: rgba(52, 73, 94, 0.725);
+  background-color: ghostwhite;
+  border: 2px solid rgba(52, 73, 94, 0.725);
+}
+
+select:hover {
+  background-color: rgb(129, 2, 2);
+  color: ghostwhite;
+  border: 2px solid rgba(52, 73, 94, 0.725);
 }

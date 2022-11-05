@@ -1,35 +1,36 @@
+.paginate {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
 .pagination-container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   list-style: none;
-  width: auto;
-}
-
-.numbers a{
-  font-size: 14px;
-  font-family: 'Times New Roman', Times, serif;
-  padding: 8px;
-  margin: 8px;
-  border: 2px solid rgb(129, 2, 2);
-  border-radius: 10px;
-  font-family: cursive;
-  /* color: white; */
-  color: rgb(129, 2, 2);
-  /* background-color: rgb(177, 95, 19); */
   background-color: rgba(52, 73, 94, 0.725);
+  border-radius: 15px;
+  padding-inline: 10px;
+  margin-top: 4px;
+  margin-bottom: 0px;
+} 
+
+.number {
+  font-family: fantasy;
+  font-size: 18px;
+  padding: 6px;
+  margin: 6px;
+  border: 2px outset rgb(129, 2, 2);
+  border-radius: 10px;
   cursor: pointer;
+  color: ghostwhite;
+  background-color: rgb(175, 20, 20);
 }
 
-.numbers a:hover {
-  /* font-family:'Times New Roman', Times, serif; */
-  color: rgb(177, 95, 19);
-  /* color: rgb(129, 2, 2); */
+.number:hover, .number:focus {
+  color: rgba(52, 73, 94, 0.725);
   background-color: rgb(255, 255, 255);
+  border: 2px outset rgba(52, 73, 94, 0.725);
 }
-
-.numbers a:active {
-  color: white;
-  /* background-color:  rgb(177, 95, 19); */
-  background-color:  rgb(46, 204, 113);
-}
-

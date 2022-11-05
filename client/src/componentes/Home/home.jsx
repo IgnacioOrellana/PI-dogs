@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux";
-import { getBreeds } from "../../redux/actions.js";
+import { getBreeds, setNumberPage } from "../../redux/actions.js";
 import Loader from "../Loader/loader";
 import Paginado from "../Pagination/pagination.jsx";
 import Breed from "../Cards/breed.jsx";
@@ -9,16 +9,13 @@ import Navbar from '../Navbar/navbar.jsx'
 
 export default function Home() {
   const breeds = useSelector((state) => state.breed) 
-  const dispatch = useDispatch()
   const [currentPage, setCurrentPage] = useState(1)
+  const dispatch = useDispatch()
   const cardsPerPage = 8
   const lastBreed = currentPage * cardsPerPage
   const firstBreed = lastBreed - cardsPerPage
   const amountOfBreeds = breeds.length > 0 ? breeds.slice(firstBreed, lastBreed) : []
   const [loading, setLoading] = useState(true)
-  
-  console.log("loading ===>", loading)
-  console.log("home ===>", amountOfBreeds)
 
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber)
@@ -34,7 +31,7 @@ export default function Home() {
   
   return (
     <div className="box-home">
-      <Navbar paginate={paginate}/>
+      <Navbar paginate={paginate} />
       <div className="paginate">
         <Paginado
           cardsPerPage={cardsPerPage}
