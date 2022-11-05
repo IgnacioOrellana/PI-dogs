@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { searchBreed } from "../../../redux/actions.js";
-import './breedFilter.css'
+import '../../Navbar/navbar.css'
 
 export default function Breeds({paginate}) {
   const [breedClick, setBreedClick] = useState("");
@@ -14,8 +14,8 @@ export default function Breeds({paginate}) {
   const handleOnClick = (e) => {
     e.preventDefault();
     if(e.target.value === "Creadas") {
-      setBreedClick(e.target.value)
       paginate(1)
+      setBreedClick(e.target.value)
     }
     if(e.target.value === "Existentes") {
       paginate(1)
@@ -28,7 +28,7 @@ export default function Breeds({paginate}) {
   }
   
   return (
-    <select className="breed-filter" title="breeds" onClick={handleOnClick}>
+    <select className="filters" title="breeds" onClick={handleOnClick}>
       <option disabled selected>Razas</option>
       <option>Creadas</option>
       <option>Existentes</option>

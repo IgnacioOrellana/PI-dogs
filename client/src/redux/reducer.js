@@ -9,14 +9,14 @@ import {
   SORT_BY_WEIGHT,
   GET_DETAIL,
   POST_BREED,
-  RESET
+  RESET,
 } from "./actions";
 
 const initialState = {
   breeds: [],
   breed: [],
   temperaments: [],
-  detail: []
+  detail: [],
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -29,7 +29,6 @@ const rootReducer = (state = initialState, action) => {
         detail: []
       }
     case GET_BREED_BY_NAME:
-      // console.log("reducer ===>",action.payload)
       return {
         ...state,
         breed: action.payload === undefined ? [] : action.payload
