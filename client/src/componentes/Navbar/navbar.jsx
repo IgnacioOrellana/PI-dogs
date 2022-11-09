@@ -10,7 +10,8 @@ import Reset from "../Botones/Reset/reset.jsx";
 export default function Navbar({paginate}) {
   return (
     <div className="navbar-container">
-      <div className="filtros-orden">
+      {/* opcion1 */}
+      {/* <div className="filtros-orden">
         <Reset />
         <div className="create-box">
           <Link to="/create">
@@ -24,12 +25,32 @@ export default function Navbar({paginate}) {
       </div>
       <div className="search-bar">
         <SearchBar paginate={paginate}/>
-      </div>
-      {/* <div className="search-bar">
-        <div className="search">
+      </div> */}
+    
+      {/* opcion2 */}
+        <div>
+          <Reset />
+        </div>
+        <div>
+          <Link to="/create">
+            <button className="breed-create">Crear nueva raza</button>
+          </Link>
+        </div>
+        <div>
+          <BreedFilter paginate={paginate}/>
+        </div>
+        <div>
+          <TempersFilter paginate={paginate}/>
+        </div>
+        <div>
+          <AlphabeticalSort paginate={paginate}/>
+        </div>
+        <div>
+          <WeightSort paginate={paginate}/>
+        </div>
+        <div>
           <SearchBar paginate={paginate}/>
         </div>
-      </div> */}
     </div>
 
     
