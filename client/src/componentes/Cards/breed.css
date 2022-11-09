@@ -4,28 +4,30 @@
   grid-template-rows: 1fr 1fr;
   grid-column-gap: 5px;
   grid-row-gap: 5px;
-  justify-content: center;
-  background: url('../../Imagens/patitas.jpeg') no-repeat;
+  justify-content: space-evenly;
   background-size: cover;
   width: auto;
   height: auto;
-  padding: 8px;
-  margin: 1px;
+  padding: 3px;
 }
 
 .breedCard {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: rgba(177, 95, 19, 0.425);
+  background-color: rgba(52, 73, 94, 0.725);
   padding: 5px;
   margin-right: 5px;
   margin-left: 5px;
   width: 290px;
-  height: 260px;
+  height: 255px;
   border-radius: 20px;
-  border: 3px solid rgb(129, 2, 2);
+  border: 3px solid rgb(175, 20, 20);
   box-shadow: 8px 8px 5px 3px rgba(0, 0, 0, 0.301);
+}
+
+.breedCard:hover{
+  border-color: #196F3D;
 }
 
 /*nueva carta*/
@@ -35,7 +37,7 @@
   margin: 6px;
   font-family: fantasy;
   font-size: 18px;
-  color: rgb(129, 2, 2);
+  color: rgb(175, 20, 20);
 }
 
 .card-image {
@@ -44,7 +46,7 @@
 }
 
 #breed-imagen {
-  border: 2px outset rgb(129, 2, 2);
+  border: 2px outset rgb(175, 20, 20);
   border-radius: 46%;
 }
 

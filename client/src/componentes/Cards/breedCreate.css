@@ -1,218 +1,238 @@
-/* .container-box {
+.container-form-box {
   min-width: 100vh;
   min-height: 100vh;
-  background: url('../../Imagens/patitas.jpeg') no-repeat;
+  background: url('../../Imagens/patitas.jpg') no-repeat;
   background-size: cover;
-}
-
-.form-container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
   flex-wrap: wrap;
-  margin: auto;
-  width: 500px;
-  height: 500px;
-  margin-left: 50%; 
-
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(6, 1fr);
-  background-color: rgba(177, 95, 19, 0.425);
-  padding: 6px;
-  border-radius: 20px;
-  border: solid rgb(179, 91, 19);
-  box-shadow: 8px 8px 5px 3px rgba(0, 0, 0, 0.301);
-}
-
-#crear {
-  display: flex;
-  justify-content: center;
-}
-
-.box-breed {
-  display: flex;
-  flex-wrap: nowrap;
-  align-content: center;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.raza {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 16px;
-  color: rgba(41, 0, 0, 0.979);
-}
-
-.errores {
-  color: red;
-  margin: 0px;
-}
-
-.box-height {
-  display: flex;
-  flex-wrap: nowrap;
-  align-content: center;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.altura {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 14px;
-  color: rgba(41, 0, 0, 0.979);
-}
-
-#label-altura {
-  display: flex;
-  justify-content: center;
-}
-
-.box-weigth {
-  display: flex;
-  flex-wrap: nowrap;
-  align-content: center;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-#label-peso {
-  display: flex;
-  justify-content: center;
-}
-
-.weigth {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 14px;
-  color: rgba(41, 0, 0, 0.979);
-}
-
-.box-age {
-  display: flex;
-  flex-wrap: nowrap;
-  align-content: center;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.age {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 14px;
-  color: rgba(41, 0, 0, 0.979);
-}
-
-.box-image {
-  display: flex;
-  flex-wrap: nowrap;
-  align-content: center;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.image {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 14px;
-  color: rgba(41, 0, 0, 0.979);
-}
-
-.box-temperamentos {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 20px;
-  color: rgba(41, 0, 0, 0.979);
-}
-
-.temperamentos {
-  display: flex;
-  flex-direction: row;
-} 
-
-#min-altura {
-  width: 10%;
-  margin-right: 100px;
-}
-#max-altura {
-  width: 10%;
-  margin-left: 100px;
-}
-
-#min-peso {
-  width: 10%;
-  margin-right: 100px;
-}
-#max-peso {
-  width: 10%;
-  margin-left: 100px;
-}
-
-
- */
- 
-
-
-.container-box {
-  min-width: 100vh;
-  min-height: 100vh;
-  background: url('../../Imagens/patitas.jpeg') no-repeat;
-  background-size: cover;
-  /* border: 3px rebeccapurple solid; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
 } 
 
 #create-breed {
   border: 1px solid rgb(5, 49, 145);
+  margin: 20px 200px 20px 0px;
 }
 
 p {
   margin: 0px;
+  font-family: cursive;
   font-size: 16px;
 }
 
+#title-create {
+  font-size: 20px;
+  margin: 12px 0px 12px 0px;
+  color: ghostwhite;
+}
+
+.errores {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  font-family: cursive;
+  min-width: 250px;
+  color: goldenrod;
+}
+
+.sin-errores {
+  visibility: hidden;
+}
+
 .form-container {
-  border: 3px rebeccapurple solid;
+  background-color: rgba(52, 73, 94);
+  min-width: 40%;
+  min-height: 40%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: center;
+  border-radius: 20px;
+  border: 3px solid rgb(175, 20, 20);
+}
+
+.form-inputs {
+  background-color: rgba(52, 73, 94, 0.725);
+  min-width: 100%;
+  min-height: 550px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   align-content: center;
-  align-items: flex-start;
-  margin-right: 110px;
+  align-items: center;
+  border-top-style: groove;
+  border-color: goldenrod;
+  background: rgb(175, 20, 20, 0.6);
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .breed-box {
   border: 2px green solid;
 }
 
-.boxes {
+.breed-name-box, .breed-buttons-box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.breed-buttons-box {
+  flex-direction: row;
+  margin: 5px;
+}
+
+.values {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  min-width: 500px;
+  justify-content: center;
+}
+
+.labels {
+  margin: 5px 0px 5px 0px;
+}
+
+.breed-name-input {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  min-width: 270px;
+}
+
+.raza, .imagen {
+  min-width: 163px;
+  border-radius: 20px;
+  text-align: center;
+  font-family: cursive;
+  -webkit-text-stroke-width: medium;
+ }
+
+.raza-input {
+  text-transform: capitalize;
+}
+
+.raza:focus {
+  border-color: rgba(52, 73, 94, 0.725);
+}
+
+.breed-altura-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center
+}
+ 
+.breed-altura-inputs {
+  display: flex;
+  flex-direction: row;
+  align-content: stretch;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.breed-altura-values {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap
+}
+
+.altura, .años, .peso {
+  width: 80px;
+  border-radius: 20px;
+  text-align: center;
+  font-family: cursive;
+  -webkit-text-stroke-width: medium;
+}
+
+.temperamentos-box {
+  background: rgba(52, 73, 94, 0.9);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: baseline;
+  width: 500px;
+}
+
+.tempers-box {
+  background-color: ghostwhite;
+  font-family: cursive;
+  font-size: 14px;
+  text-align: center;
+  min-height: 20px;
+  min-width: 10%;
+  border-radius: 10px;
+  color: rgba(52, 73, 94, 0.725);
+  border: 2px solid rgba(52, 73, 94, 0.725);
+}
+
+.main-tempers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#temper-name {
+  margin: 00px 5px 0px 5px;
+}
+
+#delete {
+  background-color: rgb(175, 20, 20);
+  color: ghostwhite;
+  font-family: cursive;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 10px;
+  margin-right: 3px;
+  border: none;
+  cursor: pointer;
+}
+
+#label-name {
+  font-family: cursive;
+  font-size: 16px;
+  color: ghostwhite;
+  margin: 10px 1px 2px 3px;
+}
+
+.create-button, .atras-button {
+  font-family: cursive;
+  font-size: 16px;
+  text-align: center;
+  height: 30px;
+  min-width: 10%;
+  margin-right: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: rgba(52, 73, 94, 0.725);
+  background-color: ghostwhite;
+  border: 2px solid rgba(52, 73, 94, 0.725);
+}
+
+.create-button:hover {
+  color: ghostwhite;
+  background-color: #196F3D;
+}
+
+.atras-button:hover {
+  color: ghostwhite;
+  background-color: rgb(175, 20, 20);
 }

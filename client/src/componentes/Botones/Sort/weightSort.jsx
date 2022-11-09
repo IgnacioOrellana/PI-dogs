@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { sortByWeight } from "../../../redux/actions";
-import './weightSort.css' 
+import '../../Navbar/navbar.css'
 
 export default function Weight({paginate}) {
   const [weight, setWeigth] = useState("")
@@ -20,7 +20,7 @@ export default function Weight({paginate}) {
   }
 
   return (
-    <select className="weigth-sort" title="weight" onClick={handleOnClick}>
+    <select className="sort" title="weight" onClick={handleOnClick}>
       <option disabled selected>Peso</option>
       <option>Menor peso</option>
       <option>Mayor peso</option>

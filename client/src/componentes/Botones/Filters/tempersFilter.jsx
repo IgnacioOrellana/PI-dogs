@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { filterByTempers, getTemperaments } from "../../../redux/actions";
-import './tempersFilter.css'
+import '../../Navbar/navbar.css'
 
 export default function Temperaments({paginate}) {
   const breeds = useSelector(state => state.temperaments)
@@ -25,7 +25,7 @@ export default function Temperaments({paginate}) {
   };
 
   return (
-    <select className="temper-filter" title="tempers" onClick={handleOnClick}>
+    <select className="filters" title="tempers" onClick={handleOnClick}>
       <option disabled selected>Temperamentos</option>
       {breeds?.map(temper => (
         <option key={temper.id} value={temper.name}> {temper.name} </option>

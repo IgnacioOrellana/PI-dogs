@@ -1,9 +1,8 @@
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { resetBreed } from '../../../redux/actions'
 import logo from '../../../Imagens/dog.png'
-import './reset.css'
-import { useState } from 'react'
+import '../../Navbar/navbar.css'
 
 export default function Reset() {
   const [reset, setReset] = useState("")
