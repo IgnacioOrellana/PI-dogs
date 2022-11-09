@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { getBreedByName } from "../../redux/actions";
-import './searchBar.css'
 import '../../componentes/Navbar/navbar.css'
 
 export default function SearchBar({paginate}) {

@@ -109,9 +109,9 @@
   min-height: 25px;
   min-width: 100%;
   color: ghostwhite;
-  background-color: rgb(129, 2, 2);
+  background-color: rgb(175, 20, 20);
   /* margin-left: 80px; */
-  border: 2px solid rgb(129, 2, 2);
+  border: 2px solid rgb(175, 20, 20);
   border-radius: 10px;
   cursor: pointer;
 }
@@ -132,7 +132,7 @@
   margin-right: 70px;
 }
 
-.filters, .sort {
+.filters, .sort, .temperamentos-options {
   font-family: cursive;
   font-size: 16px;
   text-align: center;
@@ -147,7 +147,7 @@
 }
 
 select:hover {
-  background-color: rgb(129, 2, 2);
+  background-color: rgb(175, 20, 20);
   color: ghostwhite;
   border: 2px solid rgba(52, 73, 94, 0.725);
 }
@@ -165,8 +165,8 @@ select:hover {
   min-width: 90px;
   margin-left: 10px;
   color: ghostwhite;
-  background-color: rgb(129, 2, 2);
-  border: 2px solid rgb(129, 2, 2);
+  background-color: rgb(175, 20, 20);
+  border: 2px solid rgb(175, 20, 20);
   border-radius: 10px;
   cursor: pointer;
 }

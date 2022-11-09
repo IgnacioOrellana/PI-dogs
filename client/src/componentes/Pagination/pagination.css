@@ -22,7 +22,7 @@
   font-size: 18px;
   padding: 6px;
   margin: 3px 3px 3px 3px;
-  border: 2px outset rgb(129, 2, 2);
+  border: 2px solid rgb(175, 20, 20);
   border-radius: 10px;
   cursor: pointer;
   color: ghostwhite;
@@ -32,5 +32,8 @@
 .number:hover, .number:focus {
   color: rgba(52, 73, 94, 0.725);
   background-color: rgb(255, 255, 255);
-  border: 2px outset rgba(52, 73, 94, 0.725);
+}
+
+.number:focus {
+  border-color: rgba(52, 73, 94, 0.725);
 }
