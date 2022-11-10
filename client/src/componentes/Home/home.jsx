@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux";
-import { getBreeds, setNumberPage } from "../../redux/actions.js";
+import { getBreeds } from "../../redux/actions.js";
 import Loader from "../Loader/loader";
 import Paginado from "../Pagination/pagination.jsx";
 import Breed from "../Cards/breed.jsx";
@@ -9,15 +9,15 @@ import Navbar from '../Navbar/navbar.jsx'
 import BreedNotFound from "../Cards/breedNotFound.jsx";
 
 export default function Home() {
-  // const breeds = useSelector((state) => state.breed) 
-  const breeds = []
+  const breeds = useSelector((state) => state.breed) 
+  // const breeds = []
   const [currentPage, setCurrentPage] = useState(1)
   const dispatch = useDispatch()
   const cardsPerPage = 8
   const lastBreed = currentPage * cardsPerPage
   const firstBreed = lastBreed - cardsPerPage
   const amountOfBreeds = breeds.length > 0 ? breeds.slice(firstBreed, lastBreed) : []
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
 
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber)
@@ -45,7 +45,7 @@ export default function Home() {
         { amountOfBreeds.length > 0 ? (
             amountOfBreeds.map((dog) => {
               return (
-                <div key={dog.id} >
+                <div key={dog.id} className="single-card-box" >
                   <Breed 
                     id={dog.id}
                     name={dog.raza}

@@ -10,11 +10,6 @@
   align-items: center;
 } 
 
-#create-breed {
-  border: 1px solid rgb(5, 49, 145);
-  margin: 20px 200px 20px 0px;
-}
-
 p {
   margin: 0px;
   font-family: cursive;
@@ -37,8 +32,8 @@ p {
   color: goldenrod;
 }
 
-.sin-errores {
-  visibility: hidden;
+.sin-errores { 
+  visibility: hidden; 
 }
 
 .form-container {
@@ -72,10 +67,6 @@ p {
   border-top-left-radius: 20px;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
-}
-
-.breed-box {
-  border: 2px green solid;
 }
 
 .breed-name-box, .breed-buttons-box {
@@ -127,29 +118,6 @@ p {
 
 .raza:focus {
   border-color: rgba(52, 73, 94, 0.725);
-}
-
-.breed-altura-box {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center
-}
- 
-.breed-altura-inputs {
-  display: flex;
-  flex-direction: row;
-  align-content: stretch;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.breed-altura-values {
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap
 }
 
 .altura, .años, .peso {
@@ -217,8 +185,8 @@ p {
   font-family: cursive;
   font-size: 16px;
   text-align: center;
-  height: 30px;
-  min-width: 10%;
+  min-height: 30px;
+  min-width: 13%;
   margin-right: 5px;
   border-radius: 10px;
   cursor: pointer;
@@ -235,4 +203,16 @@ p {
 .atras-button:hover {
   color: ghostwhite;
   background-color: rgb(175, 20, 20);
+}
+
+@media (max-width: 650px) {
+  .container-form-box { min-width: 70vh } 
+}
+
+@media (max-width: 580px) {
+  .container-form-box { min-width: 70vh } 
+  .form-inputs {
+    width: 450px;
+    overflow: hidden;
+  }
 }
