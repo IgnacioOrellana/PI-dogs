@@ -1,0 +1,41 @@
+.breedNotFound-box {
+  position: absolute;
+  background: rebeccapurple;
+  width: 99%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-wrap: wrap;
+  flex-direction: row
+}
+
+.searchOrCreate {
+  /* position: absolute; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  /* right: 600px; */
+  background: rgb(51, 146, 153);
+}
+
+.breedNotFound-img {
+  /* position: absolute; */
+  display: flex;
+  align-items: center;
+  width: 10%;
+  height: 100%;
+  /* right: 10px; */
+  border: 1px solid orange;
+}
+
+#error404 {
+  text-align: center;
+  background-color: red;
+  font-family: fantasy;
+  font-size: 48px;
+}

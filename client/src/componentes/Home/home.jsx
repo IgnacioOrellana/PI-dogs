@@ -6,21 +6,22 @@ import Paginado from "../Pagination/pagination.jsx";
 import Breed from "../Cards/breed.jsx";
 import '../Cards/breed.css'
 import Navbar from '../Navbar/navbar.jsx'
+import BreedNotFound from "../Cards/breedNotFound.jsx";
 
 export default function Home() {
-  const breeds = useSelector((state) => state.breed) 
+  // const breeds = useSelector((state) => state.breed) 
+  const breeds = []
   const [currentPage, setCurrentPage] = useState(1)
   const dispatch = useDispatch()
   const cardsPerPage = 8
   const lastBreed = currentPage * cardsPerPage
   const firstBreed = lastBreed - cardsPerPage
   const amountOfBreeds = breeds.length > 0 ? breeds.slice(firstBreed, lastBreed) : []
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
 
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber)
     if(amountOfBreeds.length > 0) {
-      console.log("setLoading a false")
       setLoading(false)
     }
   };
@@ -60,7 +61,7 @@ export default function Home() {
                 </div>
               )
             })
-          ) : loading ? <Loader /> : <h3>No se encontro la raza buscada, cree una nueva o intente buscar otra</h3>
+          ) : loading ? <Loader /> : <BreedNotFound />
         }
       </div>  
   </div>
