@@ -66,7 +66,7 @@ export default function BreedCreate() {
       for(let i = 0; i < textTransform.length; i++) {
         const capitalize = textTransform[i].charAt(0).toUpperCase() + textTransform[i].slice(1)
         newInputRaza += `${capitalize} `
-        input.raza = newInputRaza
+        input.raza = newInputRaza.slice(0, newInputRaza.length - 1)
       }
 
       const foundBreed = breed.filter(b => b.raza === input.raza)
