@@ -14,8 +14,8 @@
   background-color: rgba(52, 73, 94, 0.91);
   padding: 5px;
   margin: 0% 10% 0% 10%;
-  width: 80%;
-  height: 550px;
+  min-width: 80%;
+  height: 500px;
   border-radius: 20px;
   border: 3px solid rgb(129, 2, 2);
   box-shadow: 8px 8px 5px 3px rgba(0, 0, 0, 0.301);
@@ -50,6 +50,8 @@
   border: 2px outset rgb(129, 2, 2);
   box-shadow: 8px 8px 5px 3px rgba(0, 0, 0, 0.301);
   border-radius: 15%;
+  width: 450px; 
+  height: 450px
 }
 
 .left-side {
@@ -131,14 +133,14 @@ p {
 
 #volver-btn {
   position: absolute;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: cursive;
   font-size: 20px;
-  color: white;
+  color:ghostwhite;
   background-color: rgb(129, 2, 2);
   bottom: 2%;
   left: 47%;
-  height: 35px;
-  width: 7%;
+  min-height: 35px;
+  min-width: 7%;
   border-radius: 15px;  
   cursor: pointer;
 }
@@ -148,3 +150,78 @@ p {
   background-color: white;
 }
 
+@media screen and (max-width: 1050px) {
+  #breed-image {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  #breed-image {
+    width: 350px;
+    height: 380px;
+  }
+  #breed-title {
+    font-size: 24px;
+  }
+  .subtitulos, p, #parraf-tempers {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  #breed-image {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .detail {
+    height: 450px;
+  }
+  .left-side, .rigth-side {
+    width: 50%;
+  }
+  #breed-image {
+    width: 250px;
+  }
+  #breed-title {
+    font-size: 20px;
+  }
+  .subtitulos, p, #parraf-tempers {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .detail-container {
+    min-width: 100%;
+  }
+  .detail {
+    width: 100%;
+    margin: 0px 5px 0px 5px;
+    padding: 0px;
+  }
+  #breed-image {
+    width: 200px;
+  }
+}
+
+@media screen and (max-height: 650px) {
+  .detail {
+    height: 400px;
+  }
+}
+
+@media screen and (max-height: 520px) {
+  .detail {
+    height: 300px;
+  }
+  #breed-title {
+    font-size: 20px;
+  }
+  .subtitulos, p, #parraf-tempers {
+    font-size: 14px;
+  }
+}

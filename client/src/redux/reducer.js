@@ -85,7 +85,7 @@ const rootReducer = (state = initialState, action) => {
     case GET_DETAIL:
       return {
         ...state,
-        detail: action.payload
+        detail: action.payload === undefined ? [] : action.payload
       }
     case POST_BREED:
       return {
