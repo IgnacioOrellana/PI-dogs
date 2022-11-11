@@ -251,7 +251,7 @@ export default function BreedCreate() {
             <div className="breed-buttons-box">
               <button className="create-button" type="submit" disabled={!input.raza ? true : false }> Crear </button>
               <Link to="/home">
-                <button className="atras-button"> Atras </button>
+                <button className="atras-button"> Inicio </button>
               </Link>
             </div>
           </form>
