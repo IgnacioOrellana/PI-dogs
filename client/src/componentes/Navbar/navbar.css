@@ -185,7 +185,7 @@ select:hover {
   text-align: center;
   color: rgb(52, 73, 94, 0.725);
   border-radius: 10px;
-  border-color: rgb(54, 59, 50);
+  border: 1px solid rgb(52, 73, 94, 0.725);
   background-color: ghostwhite;
 }
 

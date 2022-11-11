@@ -1,18 +1,24 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams,  Link } from "react-router-dom";
 import { getDetail } from "../../redux/actions";
+import Loader from "../Loader/loader";
 import './breedDetail.css'
+import BreedDetailNotFound from "./breedDetailNotFound";
 
 export default function BreedDetail() {
+  const breedDetail = useSelector(state => state.detail)
   const dispatch = useDispatch()
   const { id } = useParams()
- 
+  const [loading, setLoading] = useState(true)
+  
   useEffect(() => {
     dispatch(getDetail(id))
   }, [dispatch])
   
-  const breedDetail = useSelector(state => state.detail)
+  setTimeout(() => {
+    setLoading(false)
+  }, 3000)
 
   return (
     <>
@@ -25,13 +31,13 @@ export default function BreedDetail() {
 
             <div className="sides-box">
               <div className="left-side">
-                <img id="breed-image" src={breedDetail[0].imagen} width="450" height="450" alt="" />
+                <img id="breed-image" src={breedDetail[0].imagen} alt="" />
               </div>
 
               <div className="rigth-side">
-              <div className="details-box">
-                <h4 id="breed-title">{breedDetail[0].raza} </h4>
-              </div>
+                <div className="details-box">
+                  <h4 id="breed-title"> {breedDetail[0].raza} </h4>
+                </div>
                 {/* <div className="details-box">
                   <h4 id="details">DETALLE</h4>
                 </div> */}
@@ -66,7 +72,7 @@ export default function BreedDetail() {
             </div>
           </div>
         </div>
-      : <h4>Loading</h4>}
+      : loading ? <Loader /> : <BreedDetailNotFound /> }
     </>
   )
 };
