@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux";
-import { getBreeds, setNumberPage } from "../../redux/actions.js";
+import { getBreeds } from "../../redux/actions.js";
 import Loader from "../Loader/loader";
 import Paginado from "../Pagination/pagination.jsx";
 import Breed from "../Cards/breed.jsx";
 import '../Cards/breed.css'
 import Navbar from '../Navbar/navbar.jsx'
+import BreedNotFound from "../Cards/breedNotFound.jsx";
 
 export default function Home() {
   const breeds = useSelector((state) => state.breed) 
+  // const breeds = []
   const [currentPage, setCurrentPage] = useState(1)
   const dispatch = useDispatch()
   const cardsPerPage = 8
@@ -20,7 +22,6 @@ export default function Home() {
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber)
     if(amountOfBreeds.length > 0) {
-      console.log("setLoading a false")
       setLoading(false)
     }
   };
@@ -44,7 +45,7 @@ export default function Home() {
         { amountOfBreeds.length > 0 ? (
             amountOfBreeds.map((dog) => {
               return (
-                <div key={dog.id} >
+                <div key={dog.id} className="single-card-box" >
                   <Breed 
                     id={dog.id}
                     name={dog.raza}
@@ -60,7 +61,7 @@ export default function Home() {
                 </div>
               )
             })
-          ) : loading ? <Loader /> : <h3>No se encontro la raza buscada, cree una nueva o intente buscar otra</h3>
+          ) : loading ? <Loader /> : <BreedNotFound />
         }
       </div>  
   </div>

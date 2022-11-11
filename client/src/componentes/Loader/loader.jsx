@@ -1,5 +1,9 @@
+import './loader.css'
+
 export default function Loader() {
   return (
-    <h3>Loading</h3>
+    <div className='loader-box'>
+      <div className='loading' />
+    </div>
   )  
 };
