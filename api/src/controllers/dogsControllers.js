@@ -124,7 +124,7 @@ async function postDog (req, res, next) {
     const addTemps = temperamentos.map((t) => newDog.addTemperamento(t))
     Promise.all(addTemps)
 
-    res.status(200).send("Raza creada exitosamente")
+    res.status(200).json(newDog)
   } catch (error) {
     next(error)
   }
