@@ -12,9 +12,11 @@ export const GET_DETAIL = "GET_DETAIL"
 export const POST_BREED = "POST_BREED";
 export const RESET = "RESET";
 
+//https://pi-backend-teal.vercel.app/
+//http://localhost:3001/dogs
 export function getBreeds() {
   return async function (dispatch) {
-    const result = await axios.get('http://localhost:3001/dogs')
+    const result = await axios.get('https://pi-backend-teal.vercel.app/')
                     .then((response) => response.data)
                     .catch((error) => console.log(error))
     dispatch({ type: GET_BREEDS, payload: result })
