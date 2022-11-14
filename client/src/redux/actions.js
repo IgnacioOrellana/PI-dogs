@@ -26,7 +26,7 @@ export function getBreeds() {
 //http://localhost:3001/dogs?name=
 export function getBreedByName(breed) {
   return async function(dispatch) {
-    const result = await axios.get(`https://pi-backend-teal.vercel.app/dogs=${breed}`)
+    const result = await axios.get(`https://pi-backend-teal.vercel.app/dogs?name=${breed}`)
                     .then((response) => response.data)
                     .catch((error) => console.log(error))
     dispatch({ type: GET_BREED_BY_NAME, payload: result })               
