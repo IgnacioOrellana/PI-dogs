@@ -22,10 +22,13 @@ const initialState = {
 const rootReducer = (state = initialState, action) => {
   switch(action.type) {
     case GET_BREEDS: 
+    console.log(action.payload)
       return {
         ...state,
-        breeds: action.payload,
-        breed: action.payload,
+        // breeds: action.payload,
+        // breed: action.payload,
+        breeds: action.payload === undefined ? [] : action.payload,
+        breed: action.payload === undefined ? [] : action.payload,
         detail: []
       }
     case GET_BREED_BY_NAME:

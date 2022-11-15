@@ -14,7 +14,7 @@ export const RESET = "RESET";
 
 //http://localhost:3001/dogs
 //https://pi-dogs-backend.vercel.app
-const backend_url = process.env.REACT_APP_BACKEND_URL || "http://localhost:3001"
+const backend_url = "http://localhost:3001" || process.env.REACT_APP_BACKEND_URL 
 export function getBreeds() {
   console.log(backend_url)
   return async function (dispatch) {

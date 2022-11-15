@@ -21,10 +21,10 @@ export default function Landing() {
               </Link>
             </div>
             <div className="contact-icons">
-              <a href="https://www.linkedin.com/in/ignacioorellanadev" target="_blank"> 
+              <a href="https://www.linkedin.com/in/ignacioorellanadev" target="_blank" rel="noreferrer"> 
                 <img id="linkedInLogo" src={linkedInIcon} alt="linkedIn-logo" />
               </a>
-              <a href="https://github.com/IgnacioOrellana" target="_blank">
+              <a href="https://github.com/IgnacioOrellana" target="_blank" rel="noreferrer">
                 <img id="gitHubLogo" src={gitHubIcon} alt="gitHub-logo" />
               </a>
             </div>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { getBreedByName, getBreeds, getTemperaments, postBreed } from "../../redux/actions";
+import { getBreeds, getTemperaments, postBreed } from "../../redux/actions";
 import validateForm from "./validateForm";
 import showTempersName from '../Cards/showTempersName.js'
 import './breedCreate.css';
