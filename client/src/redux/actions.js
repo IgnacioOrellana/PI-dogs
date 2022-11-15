@@ -13,10 +13,8 @@ export const POST_BREED = "POST_BREED";
 export const RESET = "RESET";
 
 //http://localhost:3001/dogs
-//https://pi-dogs-backend.vercel.app
 const backend_url = process.env.REACT_APP_BACKEND_URL || "http://localhost:3001" 
 export function getBreeds() {
-  console.log(backend_url)
   return async function (dispatch) {
     const result = await axios.get(`${backend_url}/dogs`)
                     .then((response) => response.data)
@@ -35,7 +33,7 @@ export function getBreedByName(breed) {
   }
 };
 
-//http://localhost:3001/dogs/
+//http://localhost:3001/dogs
 export function getBreedById(id) {
   return async function(dispatch) {
     const result = await axios.get(`${backend_url}/dogs/${id}`)
