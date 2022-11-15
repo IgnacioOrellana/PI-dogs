@@ -14,9 +14,11 @@ export const RESET = "RESET";
 
 //http://localhost:3001/dogs
 //https://pi-dogs-backend.vercel.app
+const backend_url = process.env.BACKEND_URL || "http://localhost:3001"
 export function getBreeds() {
+  console.log(backend_url)
   return async function (dispatch) {
-    const result = await axios.get('https://pi-dogs-backend.vercel.app/dogs')
+    const result = await axios.get(`${backend_url}/dogs`)
                     .then((response) => response.data)
                     .catch((error) => console.log(error))
     dispatch({ type: GET_BREEDS, payload: result })
