@@ -14,4 +14,3 @@ export default function showTempersName(tempers, addedTempers) {
   }
   return newTempers
 };
-

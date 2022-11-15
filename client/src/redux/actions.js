@@ -12,27 +12,31 @@ export const GET_DETAIL = "GET_DETAIL"
 export const POST_BREED = "POST_BREED";
 export const RESET = "RESET";
 
+//http://localhost:3001/dogs
+const backend_url = process.env.REACT_APP_BACKEND_URL || "http://localhost:3001" 
 export function getBreeds() {
   return async function (dispatch) {
-    const result = await axios.get('http://localhost:3001/dogs')
+    const result = await axios.get(`${backend_url}/dogs`)
                     .then((response) => response.data)
                     .catch((error) => console.log(error))
     dispatch({ type: GET_BREEDS, payload: result })
   }
 };
 
+//http://localhost:3001/dogs?name=
 export function getBreedByName(breed) {
   return async function(dispatch) {
-    const result = await axios.get(`http://localhost:3001/dogs?name=${breed}`)
+    const result = await axios.get(`${backend_url}/dogs?name=${breed}`)
                     .then((response) => response.data)
                     .catch((error) => console.log(error))
     dispatch({ type: GET_BREED_BY_NAME, payload: result })               
   }
 };
 
+//http://localhost:3001/dogs
 export function getBreedById(id) {
   return async function(dispatch) {
-    const result = await axios.get(`http://localhost:3001/dogs/${id}`)
+    const result = await axios.get(`${backend_url}/dogs/${id}`)
                     .then(response => response.data)
                     .catch(error => console.log(error))
     dispatch({ type: GET_BREED_BY_ID, payload: result })
@@ -47,7 +51,7 @@ export function searchBreed(searchType) {
 
 export function getTemperaments() {
   return async function(dispatch) {
-    const result = await axios.get('http://localhost:3001/temperaments')
+    const result = await axios.get(`${backend_url}/temperaments`)
                     .then(response => response.data)
                     .catch(error => console.log(error))
     dispatch({ type: GET_TEMPERAMENTS, payload: result })
@@ -74,7 +78,7 @@ export function sortByWeight(order) {
 
 export function getDetail(id) {
   return async function(dispatch) {
-    const result = await axios.get(`http://localhost:3001/dogs/${id}`)
+    const result = await axios.get(`${backend_url}/dogs/${id}`)
                     .then(response => response.data)
                     .catch(error => console.log(error))
     dispatch({ type: GET_DETAIL, payload: result })
@@ -83,7 +87,7 @@ export function getDetail(id) {
 
 export function postBreed(newBreed) {
   return async function(dispatch) {
-    const result = await axios.post(`http://localhost:3001/dogs`, newBreed)
+    const result = await axios.post(`${backend_url}/dogs`, newBreed)
                     .then(response => response.data)
                     .catch(error => console.log(error))
     dispatch({ type: POST_BREED, payload: result})     

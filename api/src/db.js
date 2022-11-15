@@ -2,13 +2,19 @@ require('dotenv').config();
 const { Sequelize } = require('sequelize');
 const fs = require('fs');
 const path = require('path');
+const pg = require('pg')
 const {
-  DB_USER, DB_PASSWORD, DB_HOST,
+  DB_USER, PGUSER,
+  DB_PASSWORD, PGPASSWORD,
+  DB_HOST, PGHOST,
+  DB_NAME, PGDATABASE, 
+  DB_PORT, PGPORT 
 } = process.env;
 
-const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/dogs`, {
+const sequelize = new Sequelize(`postgresql://${PGUSER || DB_USER}:${PGPASSWORD || DB_PASSWORD}@${PGHOST || DB_HOST}:${PGPORT || DB_PORT}/${PGDATABASE || DB_NAME}`, {
   logging: false, // set to console.log to see the raw SQL queries
   native: false, // lets Sequelize know we can use pg-native for ~30% more speed
+  dialectModule: pg
 });
 const basename = path.basename(__filename);
 

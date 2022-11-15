@@ -7,10 +7,10 @@ import Breed from "../Cards/breed.jsx";
 import '../Cards/breed.css'
 import Navbar from '../Navbar/navbar.jsx'
 import BreedNotFound from "../Cards/breedNotFound.jsx";
+import LoadingError from "../Cards/loadingError.jsx";
 
 export default function Home() {
   const breeds = useSelector((state) => state.breed) 
-  // const breeds = []
   const [currentPage, setCurrentPage] = useState(1)
   const dispatch = useDispatch()
   const cardsPerPage = 8
@@ -18,6 +18,7 @@ export default function Home() {
   const firstBreed = lastBreed - cardsPerPage
   const amountOfBreeds = breeds.length > 0 ? breeds.slice(firstBreed, lastBreed) : []
   const [loading, setLoading] = useState(true)
+  const [loadingError, setLoadingError] = useState(false)
 
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber)
@@ -29,6 +30,12 @@ export default function Home() {
   useEffect(() => {
     dispatch(getBreeds())
   }, [dispatch])
+
+  setTimeout(() => {
+    setLoading(false)
+    if(amountOfBreeds.length === 0) setLoadingError(true)
+    console.log("termino el settimeout")
+  }, 10000)
   
   return (
     <div className="box-home">
@@ -61,7 +68,7 @@ export default function Home() {
                 </div>
               )
             })
-          ) : loading ? <Loader /> : <BreedNotFound />
+          ) : loading ? <Loader /> : loadingError ? <LoadingError /> : <BreedNotFound />
         }
       </div>  
   </div>

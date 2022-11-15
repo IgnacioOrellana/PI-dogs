@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { resetBreed } from '../../redux/actions'
@@ -8,23 +7,6 @@ export default function BreedNotFound() {
   const dispatch = useDispatch()
 
   return (
-    // <div className="breedNotFound-box">
-    //   <div className="searchOrCreate">
-    //     {/* <h1 id="error404">404</h1>
-    //     <h2 id="error404-sub">Pagina no encontrada</h2>
-    //     <h3>Cree una nueva raza o intente buscar otra</h3>
-    //     <div>
-    //       <button>Inicio</button>
-    //       <button>Crear nueva raza</button>
-    //     </div>
-    //     <div className="breedNotFound-img">
-    //       <img src={breedNotFoundLogo} alt="breed-logo" id="breedNotFound-logo" />
-    //     </div> */}
-
-    //   </div>
-    // </div>
-
-
     <div className='main-box1'>
       <div className='secondary-box1'>
         <div className='text-box1'>

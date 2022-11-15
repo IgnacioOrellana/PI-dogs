@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { getBreedByName, getBreeds, getTemperaments, postBreed } from "../../redux/actions";
+import { getBreeds, getTemperaments, postBreed } from "../../redux/actions";
 import validateForm from "./validateForm";
 import showTempersName from '../Cards/showTempersName.js'
 import './breedCreate.css';
@@ -64,12 +64,12 @@ export default function BreedCreate() {
       let textTransform =  input.raza.split(" ")
       let newInputRaza = ""
       for(let i = 0; i < textTransform.length; i++) {
-          const capitalize = textTransform[i].charAt(0).toUpperCase() + textTransform[i].slice(1)
-          newInputRaza += `${capitalize} `
-          input.raza = newInputRaza
+        const capitalize = textTransform[i].charAt(0).toUpperCase() + textTransform[i].slice(1)
+        newInputRaza += `${capitalize} `
+        input.raza = newInputRaza.slice(0, newInputRaza.length - 1)
       }
 
-      const foundBreed = breed.filter(b => b.raza.toLowerCase() === input.raza.toLowerCase())
+      const foundBreed = breed.filter(b => b.raza === input.raza)
       if(foundBreed.length === 0) {
         dispatch(postBreed(input))
         alert("Nueva raza creada correctamente");
@@ -103,7 +103,7 @@ export default function BreedCreate() {
       temperamentos: [...new Set(input.temperamentos.filter(temper => temper !== e.target.value))]
     }))
   }
-  console.log(input.raza)
+  
   const tempersName = showTempersName(tempers, input.temperamentos)
 
   return (
