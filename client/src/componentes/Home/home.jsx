@@ -9,6 +9,7 @@ import Navbar from '../Navbar/navbar.jsx'
 import BreedNotFound from "../Cards/breedNotFound.jsx";
 import LoadingError from "../Cards/loadingError.jsx";
 
+let firstGetData = true
 export default function Home() {
   const breeds = useSelector((state) => state.breed) 
   const [currentPage, setCurrentPage] = useState(1)
@@ -24,6 +25,7 @@ export default function Home() {
     setCurrentPage(pageNumber)
     if(amountOfBreeds.length > 0) {
       setLoading(false)
+      setLoadingError(false)
     }
   };
   
@@ -33,9 +35,11 @@ export default function Home() {
 
   setTimeout(() => {
     setLoading(false)
-    if(amountOfBreeds.length === 0) setLoadingError(true)
-    console.log("termino el settimeout")
-  }, 10000)
+    if(firstGetData) {
+      firstGetData = false
+      setLoadingError(true)
+    }
+  }, 5000)
   
   return (
     <div className="box-home">
