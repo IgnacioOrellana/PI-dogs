@@ -28,7 +28,7 @@ export function getBreeds() {
 //http://localhost:3001/dogs?name=
 export function getBreedByName(breed) {
   return async function(dispatch) {
-    const result = await axios.get(`https://pi-dogs-backend.vercel.app/dogs?name=${breed}`)
+    const result = await axios.get(`${backend_url}/dogs?name=${breed}`)
                     .then((response) => response.data)
                     .catch((error) => console.log(error))
     dispatch({ type: GET_BREED_BY_NAME, payload: result })               
@@ -38,7 +38,7 @@ export function getBreedByName(breed) {
 //http://localhost:3001/dogs/
 export function getBreedById(id) {
   return async function(dispatch) {
-    const result = await axios.get(`https://pi-dogs-backend.vercel.app/dogs/${id}`)
+    const result = await axios.get(`${backend_url}/dogs/${id}`)
                     .then(response => response.data)
                     .catch(error => console.log(error))
     dispatch({ type: GET_BREED_BY_ID, payload: result })
@@ -53,7 +53,7 @@ export function searchBreed(searchType) {
 
 export function getTemperaments() {
   return async function(dispatch) {
-    const result = await axios.get('https://pi-dogs-backend.vercel.app/temperaments')
+    const result = await axios.get(`${backend_url}/temperaments`)
                     .then(response => response.data)
                     .catch(error => console.log(error))
     dispatch({ type: GET_TEMPERAMENTS, payload: result })
@@ -80,7 +80,7 @@ export function sortByWeight(order) {
 
 export function getDetail(id) {
   return async function(dispatch) {
-    const result = await axios.get(`https://pi-dogs-backend.vercel.app/dogs/${id}`)
+    const result = await axios.get(`${backend_url}/dogs/${id}`)
                     .then(response => response.data)
                     .catch(error => console.log(error))
     dispatch({ type: GET_DETAIL, payload: result })
@@ -89,7 +89,7 @@ export function getDetail(id) {
 
 export function postBreed(newBreed) {
   return async function(dispatch) {
-    const result = await axios.post(`https://pi-dogs-backend.vercel.app/dogs`, newBreed)
+    const result = await axios.post(`${backend_url}/dogs`, newBreed)
                     .then(response => response.data)
                     .catch(error => console.log(error))
     dispatch({ type: POST_BREED, payload: result})     
