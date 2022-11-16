@@ -22,7 +22,10 @@ server.use((req, res, next) => {
   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
   next();
 });
-server.use(cors())
+server.use(cors({
+  origin: ["http://localhost:3000", 'https://henry-dogs-io.vercel.app'],
+  methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
+}));
 
 server.use('/', routes);
 
