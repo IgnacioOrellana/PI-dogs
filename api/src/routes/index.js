@@ -11,7 +11,7 @@ router.use("/dogs", middlewareDog)
 router.use("/temperaments", middlewareTempers)
 
 router.get("/", (req, res) => {
-    res.status(200).send("Proyecto individual - perros")
+  res.status(200).send("Proyecto individual - perros")
 })
 
 module.exports = router;
